@@ -5,7 +5,7 @@ public class Main
     public static void main(String[] args) {
         String taskNumber = "\nBonus Task: "; //Just to differentiate the tasks
         System.out.println(taskNumber);
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); //User a scanner to get user inputs
 
 
 
@@ -14,23 +14,23 @@ public class Main
         System.out.print("\n");
 
 
-        System.out.println("What is your first value");
+        System.out.println("What is your first value");  //First value to use in our operation
         double value1 = scanner.nextDouble();
 
 
 
 
-        System.out.println("What is your second value");
+        System.out.println("What is your second value"); //Second value
         double value2 = scanner.nextDouble();
         scanner.nextLine();
 
 
 
 
-        System.out.println("What operation do you want to use?");
+        System.out.println("What operation do you want to use?"); //Getting the operation so we can make the calculation
         String operation = scanner.nextLine();
 
-
+        //Accounting for each operation and the various user inputs we may be given
         if (operation.equals("multiplication") || operation.equals("multiply") || operation.equals("*"))
         {
             double answer = value1 * value2;
@@ -44,7 +44,7 @@ public class Main
         } else if (operation.equals("division") || operation.equals("divide") || operation.equals("/")) {
             if (value2 == 0)
             {
-                System.out.println("Error: Cannot divide by 0");
+                System.out.println("Error: Cannot divide by 0");  //Accounting for the zero case
                 return;
             }
             else

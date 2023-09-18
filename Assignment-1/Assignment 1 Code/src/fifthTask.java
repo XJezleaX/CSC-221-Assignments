@@ -16,13 +16,13 @@ public class fifthTask {
     }
 
 
-    public static long calculateFactorial(int n) {
-        long factorial;
+    public static long calculateFactorial(int n) { //Factorial function
+        long factorial;  //Using long for larger numbers
         if (n >= 2) {
             factorial = (long)n * calculateFactorial(n - 1);
             return factorial;
         } else {
-            factorial = 1L;
+            factorial = 1;  //If 0 or 1 then factorial will always be 1 per math logic
             return factorial;
         }
     }
@@ -31,9 +31,7 @@ public class fifthTask {
     public static void main(String[] args) {
         String taskNumber = "Task Five: ";
         System.out.println(taskNumber);
-        long answer1 = calculateFactorial(1);
-        System.out.println("Example 1: The factorial is " + answer1);
-        long answer2 = calculateFactorial(8);
-        System.out.println("Example 2: The factorial is " + answer2);
+        System.out.println("Example 1: The factorial is " + calculateFactorial(1)); //Giving two examples
+        System.out.println("Example 2: The factorial is " + calculateFactorial(8));
     }
 }

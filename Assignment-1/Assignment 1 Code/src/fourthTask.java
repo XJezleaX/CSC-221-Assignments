@@ -1,9 +1,9 @@
 public class fourthTask {
-    private int width;
+    private int width;  //Creating our int variables for formula
     private int length;
 
 
-    public int getWidth() {
+    public int getWidth() {  //Getter and setter for everything
         return this.width;
     }
 
@@ -29,7 +29,7 @@ public class fourthTask {
     }
 
 
-    public int calculateArea() {
+    public int calculateArea() {     //Area function, are will equal length times width
         int area = this.length * this.width;
         return area;
     }
@@ -39,10 +39,10 @@ public class fourthTask {
         System.out.println("\n");
         System.out.println(taskNumber);
 
-        fourthTask example1 = new fourthTask(4, 5);
-        int answer1 = example1.calculateArea();
-        System.out.println("Example 1: Length = " + example1.getLength() + " and width =  " + example1.getWidth());
-        System.out.println("Area = " + answer1 + "\n");
+        fourthTask example1 = new fourthTask(4, 5); //Create a new object and put in the desired length and width
+        int answer1 = example1.calculateArea();  //Calculate area for this object
+        System.out.println("Example 1: Length = " + example1.getLength() + " and width =  " + example1.getWidth()); //Print length and width we chose
+        System.out.println("Area = " + answer1 + "\n");  //Print the area
 
         fourthTask example2 = new fourthTask(6, 7);
         int answer2 = example2.calculateArea();
