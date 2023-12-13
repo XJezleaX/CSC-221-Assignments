@@ -1,0 +1,33 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+
+public class PlayerPaddle : Paddle
+{
+    private Vector2 _direction;
+
+    private void Update()
+    {
+        
+        if (Input.GetKey(KeyCode.W))   //Using keycode W and S to indicate where the player wants to go
+        {
+            _direction = Vector2.up;    //On W paddle moves up
+        } else if(Input.GetKey(KeyCode.S))
+        {
+            _direction = Vector2.down;  //On S paddle moves down
+        }
+        else
+        {
+            _direction = Vector2.zero;  //Player does not want to move so don't move
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (_direction.sqrMagnitude != 0)
+        {
+            _rigidbody.AddForce(_direction * this.speed);  //Multiply direction by speed
+        }
+    }
+}
